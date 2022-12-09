@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="mg.css">
+        <title> My First app</title>
+    </head>
+    <script>
+        function add(){
+            var a=parseInt(document.getElementById("id1").value);
+            var b=parseInt(document.getElementById("id2").value);
+            var c=a+b;
+            document.getElementById("p1").innerText=c;
+        }
+        function sub(){
+        var a=parseInt(document.getElementById("id1").value);
+            var b=parseInt(document.getElementById("id2").value);
+            var c=a-b;
+            document.getElementById("p1").innerText=c  
+        }
+        function  mul(){
+        var a=parseInt(document.getElementById("id1").value);
+            var b=parseInt(document.getElementById("id2").value);
+            var c=a*b;
+            document.getElementById("p1").innerText=c  
+        }
+        function div(){
+        var a=parseInt(document.getElementById("id1").value);
+            var b=parseInt(document.getElementById("id2").value);
+            var c=a/b;
+            document.getElementById("p1").innerText=c  
+        }
+        function check(){
+            var Kms=document.getElementById("data").value;
+            var factor=0.621317
+            var Miles=Kms*factor;
+            document.getElementById("res").innerText=Miles+'miles'
+        }
+
+    </script>
+    <body >
+        <br><br>
+        <h1> Calculator</h1>
+        <p >Enter the 1st number 
+            <input  id="id1" placeholder="Enter the Number"  type="text"></p>
+            <p>Enter the 2nd number 
+            <input id="id2" placeholder= " Enter the Number" type="text" ></p>
+            <br><br>
+            <div class="lo">
+            <button onclick="add()">ADD</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="sub()">SUB</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="mul()">MULTIPLY</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="div()">DIVIDE</button>
+            </div>
+            <br>
+            <h2  id="p1">Your Answer</h2>
+            <hr>
+        <h1> Converts Kms into Miles</h1>
+        <br>
+        <div class="pk">
+        <input type="" name="" id="data">  Kms
+        <button onclick="check()">Converts</button >   Miles
+        <h2 id="res" ></h2>
+        </div>
+    </body>
+</html>
